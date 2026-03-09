@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Impact Predictor - The New Wave" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Impact Predictor - The New Wave</title>
+        <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/impact-predictor.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1><i class="fas fa-wave-square"></i> The New Wave</h1>
+            <nav class="nav-class">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="class-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="innovation.html"><i class="fas fa-rocket"></i> Innovation</a></li>
+                    <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="impact-predictor-page">
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h1><i class="fas fa-chart-line"></i> Impact Predictor</h1>
+                    <p>Forecast the social, environmental, and economic impact of your innovation</p>
+                </div>
+            </section>
+
+            <div class="predictor-container">
+                <div class="predictor-sidebar">
+                    <h3><i class="fas fa-globe-americas"></i> Impact Metrics</h3>
+                    <div class="impact-types">
+                        <div class="impact-type">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Social Impact</h4>
+                                <p>Lives improved, communities reached</p>
+                            </div>
+                        </div>
+                        <div class="impact-type">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Environmental Impact</h4>
+                                <p>CO2 reduction, resource conservation</p>
+                            </div>
+                        </div>
+                        <div class="impact-type">
+                            <i class="fas fa-chart-bar"></i>
+                            <div>
+                                <h4>Economic Impact</h4>
+                                <p>Job creation, cost savings, revenue potential</p>
+                            </div>
+                        </div>
+                        <div class="impact-type">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Educational Impact</h4>
+                                <p>Knowledge sharing, skill development</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="impact-framework">
+                        <h4><i class="fas fa-bullseye"></i> UN SDG Alignment</h4>
+                        <p>We analyze your project's alignment with the United Nations Sustainable Development Goals to maximize global impact.</p>
+                        <div class="sdg-examples">
+                            <div class="sdg-item">🎯 Goal 1: No Poverty</div>
+                            <div class="sdg-item">🌱 Goal 13: Climate Action</div>
+                            <div class="sdg-item">📚 Goal 4: Quality Education</div>
+                            <div class="sdg-item">💡 Goal 9: Innovation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="predictor-form">
+                    <div class="form-header">
+                        <h2>Predict Your Project's Impact</h2>
+                        <p>Provide detailed information about your project to receive comprehensive impact predictions</p>
+                    </div>
+
+                    <form id="impact-predictor-form">
+                        <div class="form-section">
+                            <h3>Project Overview</h3>
+                            
+                            <div class="form-group">
+                                <label for="project-name">Project Name *</label>
+                                <input type="text" id="project-name" name="project-name" required placeholder="e.g., CleanWater AI - Smart Water Purification">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-description">Detailed Project Description *</label>
+                                <textarea id="project-description" name="project-description" rows="5" required placeholder="Describe your project in detail. What problem does it solve? How does it work? What makes it innovative?"></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="primary-sector">Primary Impact Sector *</label>
+                                    <select id="primary-sector" name="primary-sector" required>
+                                        <option value="">Select Primary Sector</option>
+                                        <option value="health">Health & Wellness</option>
+                                        <option value="education">Education & Learning</option>
+                                        <option value="environment">Environment & Climate</option>
+                                        <option value="poverty">Poverty & Economic Development</option>
+                                        <option value="technology">Technology & Innovation</option>
+                                        <option value="agriculture">Agriculture & Food Security</option>
+                                        <option value="energy">Clean Energy</option>
+                                        <option value="water">Water & Sanitation</option>
+                                        <option value="gender">Gender Equality</option>
+                                        <option value="cities">Sustainable Cities</option>
+                                        <option value="peace">Peace & Justice</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="solution-type">Solution Type</label>
+                                    <select id="solution-type" name="solution-type">
+                                        <option value="product">Product/Hardware</option>
+                                        <option value="software">Software/App</option>
+                                        <option value="service">Service/Platform</option>
+                                        <option value="process">Process Innovation</option>
+                                        <option value="system">System/Infrastructure</option>
+                                        <option value="policy">Policy/Advocacy</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="target-audience">Primary Target Audience *</label>
+                                <textarea id="target-audience" name="target-audience" rows="3" required placeholder="Describe who will directly benefit from your solution. Include demographics, location, and specific needs."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Impact Scope & Scale</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="geographic-scope">Geographic Scope *</label>
+                                    <select id="geographic-scope" name="geographic-scope" required>
+                                        <option value="">Select Scope</option>
+                                        <option value="local">Local (City/Region)</option>
+                                        <option value="national">National</option>
+                                        <option value="regional">Regional (Multiple Countries)</option>
+                                        <option value="global">Global</option>
+                                        <option value="rural">Rural Communities</option>
+                                        <option value="urban">Urban Areas</option>
+                                        <option value="developing">Developing Countries</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="initial-reach">Initial Target Reach (Year 1)</label>
+                                    <select id="initial-reach" name="initial-reach">
+                                        <option value="100-1000">100 - 1,000 people</option>
+                                        <option value="1000-10000">1,000 - 10,000 people</option>
+                                        <option value="10000-100000">10,000 - 100,000 people</option>
+                                        <option value="100000-1000000">100,000 - 1,000,000 people</option>
+                                        <option value="1000000+">1,000,000+ people</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="scale-potential">5-Year Scale Potential</label>
+                                    <select id="scale-potential" name="scale-potential">
+                                        <option value="local">Local/Regional</option>
+                                        <option value="national">National Scale</option>
+                                        <option value="international">International Scale</option>
+                                        <option value="global">Global Scale</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="sustainability">Implementation Sustainability</label>
+                                    <select id="sustainability" name="sustainability">
+                                        <option value="self-sustaining">Self-sustaining/Profitable</option>
+                                        <option value="partially-funded">Partially Grant-funded</option>
+                                        <option value="fully-funded">Fully Grant-funded</option>
+                                        <option value="volunteer">Volunteer-based</option>
+                                        <option value="mixed">Mixed Model</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="success-metrics">How will you measure success/impact? *</label>
+                                <textarea id="success-metrics" name="success-metrics" rows="3" required placeholder="Define specific, measurable outcomes (e.g., '50% reduction in water waste', '10,000 children educated', 'Create 100 jobs')"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Social Impact Factors</h3>
+                            
+                            <div class="form-group">
+                                <label for="direct-beneficiaries">Direct Beneficiaries</label>
+                                <textarea id="direct-beneficiaries" name="direct-beneficiaries" rows="3" placeholder="Who directly benefits from your solution? How many people? What specific improvements to their lives?"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="indirect-beneficiaries">Indirect Beneficiaries</label>
+                                <textarea id="indirect-beneficiaries" name="indirect-beneficiaries" rows="3" placeholder="Who else might benefit indirectly? Communities, families, organizations, ecosystems?"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="social-challenges">Social Challenges Addressed</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="social-challenges" value="poverty">
+                                        <span>Poverty Reduction</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="social-challenges" value="health">
+                                        <span>Health Improvement</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="social-challenges" value="education">
+                                        <span>Education Access</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="social-challenges" value="gender-equality">
+                                        <span>Gender Equality</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="social-challenges" value="digital-divide">
+                                        <span>Digital Divide</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="social-challenges" value="accessibility">
+                                        <span>Accessibility</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="social-challenges" value="community-building">
+                                        <span>Community Building</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="social-challenges" value="social-justice">
+                                        <span>Social Justice</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Environmental Impact</h3>
+                            
+                            <div class="form-group">
+                                <label for="environmental-benefits">Environmental Benefits</label>
+                                <textarea id="environmental-benefits" name="environmental-benefits" rows="3" placeholder="How does your solution help the environment? (e.g., reduces emissions, conserves resources, prevents waste)"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="resource-impact">Resource Impact</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="resource-impact" value="energy-reduction">
+                                        <span>Energy Reduction</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="resource-impact" value="water-conservation">
+                                        <span>Water Conservation</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="resource-impact" value="waste-reduction">
+                                        <span>Waste Reduction</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="resource-impact" value="carbon-reduction">
+                                        <span>Carbon Reduction</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="resource-impact" value="renewable-energy">
+                                        <span>Renewable Energy</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="resource-impact" value="pollution-reduction">
+                                        <span>Pollution Reduction</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quantifiable-environmental">Quantifiable Environmental Impact</label>
+                                <textarea id="quantifiable-environmental" name="quantifiable-environmental" rows="3" placeholder="Provide specific estimates if available (e.g., '1000 tons CO2 saved annually', '50% reduction in plastic waste')"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Economic Impact</h3>
+                            
+                            <div class="form-group">
+                                <label for="job-creation">Job Creation Potential</label>
+                                <select id="job-creation" name="job-creation">
+                                    <option value="none">No direct job creation</option>
+                                    <option value="1-10">1-10 jobs</option>
+                                    <option value="10-50">10-50 jobs</option>
+                                    <option value="50-200">50-200 jobs</option>
+                                    <option value="200-1000">200-1,000 jobs</option>
+                                    <option value="1000+">1,000+ jobs</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="economic-benefits">Economic Benefits for Beneficiaries</label>
+                                <textarea id="economic-benefits" name="economic-benefits" rows="3" placeholder="How does your solution improve economic outcomes? (cost savings, income generation, efficiency gains)"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="market-size">Potential Market Size</label>
+                                <select id="market-size" name="market-size">
+                                    <option value="small">Small Market (< $1M)</option>
+                                    <option value="medium">Medium Market ($1M - $10M)</option>
+                                    <option value="large">Large Market ($10M - $100M)</option>
+                                    <option value="massive">Massive Market ($100M+)</option>
+                                    <option value="non-profit">Non-profit/Social Enterprise</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary btn-large">
+                                <i class="fas fa-chart-line"></i> Predict Impact
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Impact Prediction Results (initially hidden) -->
+                    <div id="impact-results" class="impact-results" style="display: none;">
+                        <h2><i class="fas fa-chart-bar"></i> Impact Prediction Results</h2>
+                        
+                        <div class="impact-summary">
+                            <div class="overall-score">
+                                <div class="score-display">
+                                    <div class="score-circle">
+                                        <span id="overall-impact-score">85</span>
+                                        <small>/100</small>
+                                    </div>
+                                    <p>Overall Impact Score</p>
+                                </div>
+                            </div>
+                            
+                            <div class="impact-breakdown">
+                                <div class="impact-metric">
+                                    <h4><i class="fas fa-users"></i> Social Impact</h4>
+                                    <div class="metric-score" id="social-score">82</div>
+                                    <div class="metric-description" id="social-description">High potential for community improvement</div>
+                                </div>
+                                <div class="impact-metric">
+                                    <h4><i class="fas fa-leaf"></i> Environmental Impact</h4>
+                                    <div class="metric-score" id="environmental-score">75</div>
+                                    <div class="metric-description" id="environmental-description">Moderate environmental benefits</div>
+                                </div>
+                                <div class="impact-metric">
+                                    <h4><i class="fas fa-chart-bar"></i> Economic Impact</h4>
+                                    <div class="metric-score" id="economic-score">90</div>
+                                    <div class="metric-description" id="economic-description">Strong economic potential</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="predictions-detail">
+                            <div class="prediction-section">
+                                <h3><i class="fas fa-calendar-alt"></i> 5-Year Impact Projections</h3>
+                                <div class="projections-grid">
+                                    <div class="projection-card">
+                                        <h4>People Directly Impacted</h4>
+                                        <div class="projection-number" id="people-impacted">25,000+</div>
+                                    </div>
+                                    <div class="projection-card">
+                                        <h4>Communities Reached</h4>
+                                        <div class="projection-number" id="communities-reached">15</div>
+                                    </div>
+                                    <div class="projection-card">
+                                        <h4>Jobs Created</h4>
+                                        <div class="projection-number" id="jobs-created">120</div>
+                                    </div>
+                                    <div class="projection-card">
+                                        <h4>Economic Value Generated</h4>
+                                        <div class="projection-number" id="economic-value">$2.5M</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="prediction-section">
+                                <h3><i class="fas fa-bullseye"></i> UN SDG Alignment</h3>
+                                <div id="sdg-alignment" class="sdg-alignment">
+                                    <!-- SDG alignment will be populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <div class="prediction-section">
+                                <h3><i class="fas fa-lightbulb"></i> Impact Enhancement Recommendations</h3>
+                                <div id="impact-recommendations" class="impact-recommendations">
+                                    <!-- Recommendations will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="next-actions">
+                            <h3><i class="fas fa-forward"></i> Next Steps to Maximize Impact</h3>
+                            <div class="actions-grid">
+                                <a href="team-builder.html" class="action-card">
+                                    <i class="fas fa-users"></i>
+                                    <h4>Build Your Team</h4>
+                                    <p>Find experts to enhance your solution</p>
+                                </a>
+                                <a href="funding-finder.html" class="action-card">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <h4>Find Impact Funding</h4>
+                                    <p>Discover grants and impact investors</p>
+                                </a>
+                                <a href="global-impact.html" class="action-card">
+                                    <i class="fas fa-globe"></i>
+                                    <h4>Join Impact Network</h4>
+                                    <p>Connect with other impact innovators</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <h3><i class="fas fa-wave-square"></i> The New Wave</h3>
+                    <p>Empowering the generation of builders and revolutionists. The time is now to shape the future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section navigation">
+                    <h4><i class="fas fa-sitemap"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="innovation.html"><i class="fas fa-rocket"></i> Innovation Hub</a></li>
+                        <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section features">
+                    <h4><i class="fas fa-star"></i> Features</h4>
+                    <ul>
+                        <li><a href="ai-mentorship.html"><i class="fas fa-brain"></i> AI Mentorship</a></li>
+                        <li><a href="project-collaboration.html"><i class="fas fa-project-diagram"></i> Project Collaboration</a></li>
+                        <li><a href="skill-development.html"><i class="fas fa-graduation-cap"></i> Skill Development</a></li>
+                        <li><a href="global-impact.html"><i class="fas fa-globe"></i> Global Impact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact">
+                    <h4><i class="fas fa-envelope"></i> Get Started</h4>
+                    <p><i class="fas fa-paper-plane"></i> Join thousands of young innovators</p>
+                    <a href="join.html" class="cta-button"><i class="fas fa-user-plus"></i> Join Now</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 The New Wave. Revolutionizing youth innovation globally.</p>
+            </div>
+        </footer>
+    </body>
+</html>

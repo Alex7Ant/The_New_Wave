@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Funding Finder - The New Wave" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Funding Finder - The New Wave</title>
+        <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/funding-finder.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1><i class="fas fa-wave-square"></i> The New Wave</h1>
+            <nav class="nav-class">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="class-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="innovation.html"><i class="fas fa-rocket"></i> Innovation</a></li>
+                    <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="funding-finder-page">
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h1><i class="fas fa-search-dollar"></i> AI Funding Finder</h1>
+                    <p>Discover grants, investors, and funding opportunities perfectly matched to your project</p>
+                </div>
+            </section>
+
+            <div class="finder-container">
+                <div class="finder-sidebar">
+                    <h3><i class="fas fa-filter"></i> Funding Types</h3>
+                    <div class="funding-types">
+                        <div class="funding-type">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <div>
+                                <h4>Grants</h4>
+                                <p>Government & foundation grants</p>
+                            </div>
+                        </div>
+                        <div class="funding-type">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Accelerators</h4>
+                                <p>Startup accelerator programs</p>
+                            </div>
+                        </div>
+                        <div class="funding-type">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h4>Angel Investors</h4>
+                                <p>Early-stage angel funding</p>
+                            </div>
+                        </div>
+                        <div class="funding-type">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <h4>VCs</h4>
+                                <p>Venture capital firms</p>
+                            </div>
+                        </div>
+                        <div class="funding-type">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Impact Investors</h4>
+                                <p>Social & environmental impact focus</p>
+                            </div>
+                        </div>
+                        <div class="funding-type">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h4>Competitions</h4>
+                                <p>Innovation challenges & contests</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="funding-stats">
+                        <h4><i class="fas fa-chart-bar"></i> Platform Stats</h4>
+                        <div class="stat">
+                            <span class="stat-number">$2.4B</span>
+                            <span class="stat-label">Total Funding Tracked</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15,000+</span>
+                            <span class="stat-label">Funding Opportunities</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">78%</span>
+                            <span class="stat-label">Match Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="finder-form">
+                    <div class="form-header">
+                        <h2>Find Your Perfect Funding Match</h2>
+                        <p>Answer a few questions and we'll find funding opportunities tailored to your project</p>
+                    </div>
+
+                    <form id="funding-finder-form">
+                        <div class="form-section">
+                            <h3>Project Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="project-name">Project Name *</label>
+                                <input type="text" id="project-name" name="project-name" required placeholder="e.g., GreenTech Water Solutions">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-stage">Current Project Stage *</label>
+                                <select id="project-stage" name="project-stage" required>
+                                    <option value="">Select Stage</option>
+                                    <option value="idea">Idea/Concept</option>
+                                    <option value="research">Research & Validation</option>
+                                    <option value="prototype">Prototype Development</option>
+                                    <option value="mvp">MVP/Beta Testing</option>
+                                    <option value="pre-launch">Pre-Launch</option>
+                                    <option value="early-revenue">Early Revenue</option>
+                                    <option value="scaling">Scaling</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="industry">Industry/Sector *</label>
+                                    <select id="industry" name="industry" required>
+                                        <option value="">Select Industry</option>
+                                        <option value="healthcare">Healthcare & Medical</option>
+                                        <option value="education">Education & EdTech</option>
+                                        <option value="environment">Environment & Climate</option>
+                                        <option value="fintech">Financial Technology</option>
+                                        <option value="agriculture">Agriculture & Food</option>
+                                        <option value="energy">Clean Energy</option>
+                                        <option value="water">Water & Sanitation</option>
+                                        <option value="transportation">Transportation</option>
+                                        <option value="smart-cities">Smart Cities & IoT</option>
+                                        <option value="social-impact">Social Impact</option>
+                                        <option value="enterprise">Enterprise Software</option>
+                                        <option value="consumer">Consumer Products</option>
+                                        <option value="biotech">Biotechnology</option>
+                                        <option value="ai-ml">AI & Machine Learning</option>
+                                        <option value="blockchain">Blockchain & Web3</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="business-model">Business Model</label>
+                                    <select id="business-model" name="business-model">
+                                        <option value="b2b">B2B (Business to Business)</option>
+                                        <option value="b2c">B2C (Business to Consumer)</option>
+                                        <option value="b2g">B2G (Business to Government)</option>
+                                        <option value="marketplace">Marketplace/Platform</option>
+                                        <option value="saas">SaaS (Software as a Service)</option>
+                                        <option value="nonprofit">Non-profit</option>
+                                        <option value="social-enterprise">Social Enterprise</option>
+                                        <option value="hardware">Hardware Product</option>
+                                        <option value="licensing">Licensing/IP</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-description">Brief Project Description *</label>
+                                <textarea id="project-description" name="project-description" rows="4" required placeholder="Describe your project, the problem it solves, and your unique approach..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Funding Requirements</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="funding-amount">Funding Amount Needed *</label>
+                                    <select id="funding-amount" name="funding-amount" required>
+                                        <option value="">Select Amount</option>
+                                        <option value="under-10k">Under $10,000</option>
+                                        <option value="10k-25k">$10,000 - $25,000</option>
+                                        <option value="25k-50k">$25,000 - $50,000</option>
+                                        <option value="50k-100k">$50,000 - $100,000</option>
+                                        <option value="100k-250k">$100,000 - $250,000</option>
+                                        <option value="250k-500k">$250,000 - $500,000</option>
+                                        <option value="500k-1m">$500,000 - $1M</option>
+                                        <option value="1m-5m">$1M - $5M</option>
+                                        <option value="5m+">$5M+</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="funding-use">Primary Use of Funds</label>
+                                    <select id="funding-use" name="funding-use">
+                                        <option value="product-development">Product Development</option>
+                                        <option value="research">Research & Development</option>
+                                        <option value="marketing">Marketing & Customer Acquisition</option>
+                                        <option value="team-building">Team Building & Hiring</option>
+                                        <option value="operations">Operations & Infrastructure</option>
+                                        <option value="manufacturing">Manufacturing & Production</option>
+                                        <option value="regulatory">Regulatory & Compliance</option>
+                                        <option value="pilot-programs">Pilot Programs</option>
+                                        <option value="working-capital">Working Capital</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="funding-timeline">Funding Timeline</label>
+                                <select id="funding-timeline" name="funding-timeline">
+                                    <option value="immediate">Immediate (Within 1 month)</option>
+                                    <option value="short-term">Short-term (1-3 months)</option>
+                                    <option value="medium-term">Medium-term (3-6 months)</option>
+                                    <option value="long-term">Long-term (6+ months)</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="equity-willingness">Equity Considerations</label>
+                                <select id="equity-willingness" name="equity-willingness">
+                                    <option value="no-equity">Non-dilutive funding only (grants, loans)</option>
+                                    <option value="small-equity">Open to small equity (5-15%)</option>
+                                    <option value="moderate-equity">Open to moderate equity (15-25%)</option>
+                                    <option value="significant-equity">Open to significant equity (25%+)</option>
+                                    <option value="equity-flexible">Flexible on equity terms</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Project Details</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="team-size">Team Size</label>
+                                    <select id="team-size" name="team-size">
+                                        <option value="solo">Solo founder</option>
+                                        <option value="2-3">2-3 people</option>
+                                        <option value="4-6">4-6 people</option>
+                                        <option value="7-10">7-10 people</option>
+                                        <option value="10+">10+ people</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="location">Primary Location</label>
+                                    <select id="location" name="location">
+                                        <option value="north-america">North America</option>
+                                        <option value="europe">Europe</option>
+                                        <option value="asia-pacific">Asia-Pacific</option>
+                                        <option value="latin-america">Latin America</option>
+                                        <option value="africa">Africa</option>
+                                        <option value="middle-east">Middle East</option>
+                                        <option value="global">Global/Remote</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="traction">Current Traction/Progress</label>
+                                <textarea id="traction" name="traction" rows="3" placeholder="Describe any current progress: users, revenue, partnerships, pilot programs, etc."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="impact-focus">Impact/Social Good Focus</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="impact-focus" value="social-impact">
+                                        <span>Social Impact</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="impact-focus" value="environmental">
+                                        <span>Environmental/Climate</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="impact-focus" value="diversity">
+                                        <span>Diversity & Inclusion</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="impact-focus" value="developing-countries">
+                                        <span>Developing Countries</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="impact-focus" value="underserved">
+                                        <span>Underserved Communities</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="impact-focus" value="sdg-aligned">
+                                        <span>UN SDG Aligned</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="competitive-advantages">Key Competitive Advantages</label>
+                                <textarea id="competitive-advantages" name="competitive-advantages" rows="3" placeholder="What makes your solution unique? Patents, technology, team expertise, market positioning..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Funding Preferences</h3>
+                            
+                            <div class="form-group">
+                                <label for="preferred-funding-types">Preferred Funding Types (Select all that apply)</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferred-funding-types" value="government-grants">
+                                        <span>Government Grants</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferred-funding-types" value="foundation-grants">
+                                        <span>Foundation Grants</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferred-funding-types" value="accelerator-programs">
+                                        <span>Accelerator Programs</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferred-funding-types" value="angel-investors">
+                                        <span>Angel Investors</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferred-funding-types" value="venture-capital">
+                                        <span>Venture Capital</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferred-funding-types" value="impact-investors">
+                                        <span>Impact Investors</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferred-funding-types" value="crowdfunding">
+                                        <span>Crowdfunding</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferred-funding-types" value="competitions">
+                                        <span>Innovation Competitions</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="preferred-funding-types" value="corporate-partnerships">
+                                        <span>Corporate Partnerships</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="additional-support">Additional Support Needed</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="additional-support" value="mentorship">
+                                        <span>Mentorship</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="additional-support" value="networking">
+                                        <span>Industry Networking</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="additional-support" value="technical-expertise">
+                                        <span>Technical Expertise</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="additional-support" value="market-access">
+                                        <span>Market Access</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="additional-support" value="regulatory-guidance">
+                                        <span>Regulatory Guidance</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="additional-support" value="customer-introductions">
+                                        <span>Customer Introductions</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary btn-large">
+                                <i class="fas fa-search"></i> Find Funding Opportunities
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Funding Results (initially hidden) -->
+                    <div id="funding-results" class="funding-results" style="display: none;">
+                        <h2><i class="fas fa-list-alt"></i> Your Funding Matches</h2>
+                        
+                        <div class="results-header">
+                            <div class="match-summary">
+                                <span id="match-count">8</span> funding opportunities found
+                                <span class="total-funding">Total potential: <strong id="total-potential">$2.3M</strong></span>
+                            </div>
+                            <div class="results-filters">
+                                <select id="sort-results">
+                                    <option value="match-score">Best Match</option>
+                                    <option value="amount">Funding Amount</option>
+                                    <option value="deadline">Application Deadline</option>
+                                    <option value="type">Funding Type</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="funding-opportunities" class="funding-opportunities">
+                            <!-- Funding opportunities will be populated by JavaScript -->
+                        </div>
+
+                        <div class="application-support">
+                            <h3><i class="fas fa-hands-helping"></i> Application Support</h3>
+                            <p>Ready to apply? Get help with your funding applications and pitch preparation.</p>
+                            <div class="support-actions">
+                                <button class="btn-primary" id="get-application-help">
+                                    <i class="fas fa-edit"></i> Get Application Help
+                                </button>
+                                <button class="btn-secondary" id="save-opportunities">
+                                    <i class="fas fa-bookmark"></i> Save Selected Opportunities
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <h3><i class="fas fa-wave-square"></i> The New Wave</h3>
+                    <p>Empowering the generation of builders and revolutionists. The time is now to shape the future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section navigation">
+                    <h4><i class="fas fa-sitemap"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="innovation.html"><i class="fas fa-rocket"></i> Innovation Hub</a></li>
+                        <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section features">
+                    <h4><i class="fas fa-star"></i> Features</h4>
+                    <ul>
+                        <li><a href="ai-mentorship.html"><i class="fas fa-brain"></i> AI Mentorship</a></li>
+                        <li><a href="project-collaboration.html"><i class="fas fa-project-diagram"></i> Project Collaboration</a></li>
+                        <li><a href="skill-development.html"><i class="fas fa-graduation-cap"></i> Skill Development</a></li>
+                        <li><a href="global-impact.html"><i class="fas fa-globe"></i> Global Impact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact">
+                    <h4><i class="fas fa-envelope"></i> Get Started</h4>
+                    <p><i class="fas fa-paper-plane"></i> Join thousands of young innovators</p>
+                    <a href="join.html" class="cta-button"><i class="fas fa-user-plus"></i> Join Now</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 The New Wave. Revolutionizing youth innovation globally.</p>
+            </div>
+        </footer>
+    </body>
+</html>

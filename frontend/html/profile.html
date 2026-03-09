@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="User Profile - The New Wave" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile - The New Wave</title>
+        <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/profile.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1><i class="fas fa-wave-square"></i> The New Wave</h1>
+            <nav class="nav-class">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="class-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="innovation.html"><i class="fas fa-rocket"></i> Innovation</a></li>
+                    <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                    <li class="active"><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="profile-page">
+            <!-- Profile Header -->
+            <section class="profile-header">
+                <div class="container">
+                    <div class="profile-banner">
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar">
+                                <img id="profile-image" src="https://via.placeholder.com/150x150" alt="Profile Picture">
+                                <div class="avatar-overlay">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Change Photo</span>
+                                </div>
+                            </div>
+                            <div class="profile-status">
+                                <span class="status-indicator online"></span>
+                                <span class="status-text">Online</span>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-info">
+                            <h1 id="profile-name">Alex Johnson</h1>
+                            <p class="profile-title">Young Innovator & AI Enthusiast</p>
+                            <div class="profile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>San Francisco, CA</span>
+                            </div>
+                            <div class="profile-joined">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Joined March 2024</span>
+                            </div>
+                            <button class="edit-profile-btn">
+                                <i class="fas fa-edit"></i> Edit Profile
+                            </button>
+                        </div>
+
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">12</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1.2k</div>
+                                <div class="stat-label">Impact Points</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">Collaborations</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Navigation Tabs -->
+            <section class="profile-navigation">
+                <div class="container">
+                    <div class="profile-tabs">
+                        <button class="tab-btn active" data-tab="overview">
+                            <i class="fas fa-chart-line"></i> Overview
+                        </button>
+                        <button class="tab-btn" data-tab="projects">
+                            <i class="fas fa-project-diagram"></i> Projects
+                        </button>
+                        <button class="tab-btn" data-tab="achievements">
+                            <i class="fas fa-trophy"></i> Achievements
+                        </button>
+                        <button class="tab-btn" data-tab="learning">
+                            <i class="fas fa-graduation-cap"></i> Learning Path
+                        </button>
+                        <button class="tab-btn" data-tab="settings">
+                            <i class="fas fa-cog"></i> Settings
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Content -->
+            <section class="profile-content">
+                <div class="container">
+                    <!-- Overview Tab -->
+                    <div class="tab-content active" id="overview-tab">
+                        <div class="overview-grid">
+                            <!-- Recent Activity -->
+                            <div class="overview-panel">
+                                <h3><i class="fas fa-clock"></i> Recent Activity</h3>
+                                <div class="activity-feed">
+                                    <div class="activity-item">
+                                        <div class="activity-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p><strong>Completed AI Project Analyzer certification</strong></p>
+                                            <span class="activity-time">2 hours ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p><strong>Joined "Climate Tech Innovation" team</strong></p>
+                                            <span class="activity-time">1 day ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon">
+                                            <i class="fas fa-rocket"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p><strong>Launched "Smart Water Management" project</strong></p>
+                                            <span class="activity-time">3 days ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon">
+                                            <i class="fas fa-award"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p><strong>Earned "Impact Innovator" badge</strong></p>
+                                            <span class="activity-time">1 week ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Dashboard -->
+                            <div class="overview-panel">
+                                <h3><i class="fas fa-chart-line"></i> Progress Dashboard</h3>
+                                <div class="progress-metrics">
+                                    <div class="metric-card">
+                                        <div class="metric-header">
+                                            <i class="fas fa-brain"></i>
+                                            <span>Innovation Score</span>
+                                        </div>
+                                        <div class="metric-value">85/100</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-header">
+                                            <i class="fas fa-handshake"></i>
+                                            <span>Collaboration Score</span>
+                                        </div>
+                                        <div class="metric-value">92/100</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 92%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-header">
+                                            <i class="fas fa-globe"></i>
+                                            <span>Impact Level</span>
+                                        </div>
+                                        <div class="metric-value">Level 4</div>
+                                        <div class="level-indicator">
+                                            <div class="level-dots">
+                                                <span class="dot filled"></span>
+                                                <span class="dot filled"></span>
+                                                <span class="dot filled"></span>
+                                                <span class="dot filled"></span>
+                                                <span class="dot"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Current Goals -->
+                            <div class="overview-panel">
+                                <h3><i class="fas fa-target"></i> Current Goals</h3>
+                                <div class="goals-list">
+                                    <div class="goal-item">
+                                        <div class="goal-progress">
+                                            <div class="goal-header">
+                                                <span class="goal-title">Complete AI Fundamentals Course</span>
+                                                <span class="goal-percentage">75%</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="goal-item">
+                                        <div class="goal-progress">
+                                            <div class="goal-header">
+                                                <span class="goal-title">Launch Climate Tech Project</span>
+                                                <span class="goal-percentage">40%</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 40%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="goal-item">
+                                        <div class="goal-progress">
+                                            <div class="goal-header">
+                                                <span class="goal-title">Build Team of 5 Members</span>
+                                                <span class="goal-percentage">60%</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 60%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projects Tab -->
+                    <div class="tab-content" id="projects-tab">
+                        <div class="projects-header">
+                            <h3><i class="fas fa-project-diagram"></i> My Projects</h3>
+                            <button class="create-project-btn">
+                                <i class="fas fa-plus"></i> New Project
+                            </button>
+                        </div>
+                        <div class="projects-grid">
+                            <div class="project-card featured">
+                                <div class="project-header">
+                                    <div class="project-status active">Active</div>
+                                    <div class="project-team">
+                                        <i class="fas fa-users"></i> 4 members
+                                    </div>
+                                </div>
+                                <h4>Smart Water Management AI</h4>
+                                <p>AI-driven system to optimize water usage in urban environments using IoT sensors and machine learning.</p>
+                                <div class="project-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>85% Complete</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-eye"></i>
+                                        <span>1.2k Views</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-heart"></i>
+                                        <span>89 Likes</span>
+                                    </div>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn-primary">View Details</button>
+                                    <button class="btn-secondary">Edit</button>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-status completed">Completed</div>
+                                    <div class="project-team">
+                                        <i class="fas fa-users"></i> 6 members
+                                    </div>
+                                </div>
+                                <h4>Youth Mental Health App</h4>
+                                <p>Mobile application providing mental health resources and peer support for young adults.</p>
+                                <div class="project-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-download"></i>
+                                        <span>2.5k Downloads</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8 Rating</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-award"></i>
+                                        <span>Winner</span>
+                                    </div>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn-primary">View Details</button>
+                                    <button class="btn-secondary">Share</button>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <div class="project-status planning">Planning</div>
+                                    <div class="project-team">
+                                        <i class="fas fa-users"></i> 2 members
+                                    </div>
+                                </div>
+                                <h4>Sustainable Fashion Marketplace</h4>
+                                <p>Platform connecting eco-conscious consumers with sustainable fashion brands and upcycled clothing.</p>
+                                <div class="project-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Planning Phase</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>10 Ideas</span>
+                                    </div>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="btn-primary">Continue Planning</button>
+                                    <button class="btn-secondary">Find Team</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Achievements Tab -->
+                    <div class="tab-content" id="achievements-tab">
+                        <div class="achievements-header">
+                            <h3><i class="fas fa-trophy"></i> Achievements & Certifications</h3>
+                            <div class="achievement-stats">
+                                <div class="stat">
+                                    <span class="number">15</span>
+                                    <span class="label">Badges Earned</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">5</span>
+                                    <span class="label">Certifications</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">3</span>
+                                    <span class="label">Awards Won</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievements-grid">
+                            <!-- Certifications -->
+                            <div class="achievement-section">
+                                <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                                <div class="certifications-list">
+                                    <div class="certification-card completed">
+                                        <div class="cert-icon">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <div class="cert-info">
+                                            <h5>AI Project Analysis Certification</h5>
+                                            <p>Advanced certification in AI-powered project feasibility analysis</p>
+                                            <div class="cert-details">
+                                                <span class="cert-date">Completed: December 2024</span>
+                                                <span class="cert-score">Score: 96/100</span>
+                                            </div>
+                                        </div>
+                                        <div class="cert-badge">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="certification-card completed">
+                                        <div class="cert-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="cert-info">
+                                            <h5>Team Leadership & Collaboration</h5>
+                                            <p>Certification in leading diverse, global innovation teams</p>
+                                            <div class="cert-details">
+                                                <span class="cert-date">Completed: November 2024</span>
+                                                <span class="cert-score">Score: 94/100</span>
+                                            </div>
+                                        </div>
+                                        <div class="cert-badge">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="certification-card in-progress">
+                                        <div class="cert-icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <div class="cert-info">
+                                            <h5>Impact Measurement & Assessment</h5>
+                                            <p>Learn to measure and optimize social and environmental impact</p>
+                                            <div class="cert-details">
+                                                <span class="cert-progress">Progress: 65%</span>
+                                                <span class="cert-due">Due: February 2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="cert-badge">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Badges -->
+                            <div class="achievement-section">
+                                <h4><i class="fas fa-medal"></i> Achievement Badges</h4>
+                                <div class="badges-grid">
+                                    <div class="badge earned">
+                                        <div class="badge-icon">
+                                            <i class="fas fa-rocket"></i>
+                                        </div>
+                                        <span class="badge-name">First Launch</span>
+                                    </div>
+                                    <div class="badge earned">
+                                        <div class="badge-icon">
+                                            <i class="fas fa-handshake"></i>
+                                        </div>
+                                        <span class="badge-name">Team Player</span>
+                                    </div>
+                                    <div class="badge earned">
+                                        <div class="badge-icon">
+                                            <i class="fas fa-globe"></i>
+                                        </div>
+                                        <span class="badge-name">Global Impact</span>
+                                    </div>
+                                    <div class="badge earned">
+                                        <div class="badge-icon">
+                                            <i class="fas fa-lightbulb"></i>
+                                        </div>
+                                        <span class="badge-name">Innovator</span>
+                                    </div>
+                                    <div class="badge earned">
+                                        <div class="badge-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="badge-name">Rising Star</span>
+                                    </div>
+                                    <div class="badge locked">
+                                        <div class="badge-icon">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <span class="badge-name">Innovation Leader</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Learning Path Tab -->
+                    <div class="tab-content" id="learning-tab">
+                        <div class="learning-header">
+                            <h3><i class="fas fa-graduation-cap"></i> Learning Journey</h3>
+                            <div class="learning-stats">
+                                <div class="stat">
+                                    <span class="number">12</span>
+                                    <span class="label">Courses Completed</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">156</span>
+                                    <span class="label">Hours Learned</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">89%</span>
+                                    <span class="label">Average Score</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="learning-content">
+                            <div class="current-path">
+                                <h4><i class="fas fa-route"></i> Current Learning Path: AI Innovation Track</h4>
+                                <div class="path-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                    <span class="progress-text">6 of 8 modules completed (75%)</span>
+                                </div>
+                            </div>
+
+                            <div class="learning-modules">
+                                <div class="module completed">
+                                    <div class="module-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h5>Introduction to AI & Machine Learning</h5>
+                                        <p>Foundation concepts in artificial intelligence and machine learning</p>
+                                        <div class="module-meta">
+                                            <span>Completed: Nov 2024</span>
+                                            <span>Score: 94%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="module completed">
+                                    <div class="module-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h5>Data Science for Innovation</h5>
+                                        <p>Using data science techniques to drive innovation projects</p>
+                                        <div class="module-meta">
+                                            <span>Completed: Nov 2024</span>
+                                            <span>Score: 91%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="module current">
+                                    <div class="module-icon">
+                                        <i class="fas fa-play-circle"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h5>AI Ethics & Responsible Innovation</h5>
+                                        <p>Understanding ethical implications of AI in innovation</p>
+                                        <div class="module-meta">
+                                            <span>In Progress: 65% complete</span>
+                                            <span>Due: Jan 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="module upcoming">
+                                    <div class="module-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <div class="module-info">
+                                        <h5>Advanced AI Applications</h5>
+                                        <p>Implementing AI solutions for real-world problems</p>
+                                        <div class="module-meta">
+                                            <span>Unlocks: Jan 2025</span>
+                                            <span>Estimated: 3 weeks</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div class="tab-content" id="settings-tab">
+                        <div class="settings-header">
+                            <h3><i class="fas fa-cog"></i> Account Settings</h3>
+                        </div>
+
+                        <div class="settings-content">
+                            <div class="settings-section">
+                                <h4>Profile Information</h4>
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label for="full-name">Full Name</label>
+                                        <input type="text" id="full-name" value="Alex Johnson">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" value="alex.johnson@email.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bio">Bio</label>
+                                        <textarea id="bio" rows="3">Passionate young innovator focused on AI solutions for climate change and social impact. Always looking to collaborate on meaningful projects that can make a difference.</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="location">Location</label>
+                                        <input type="text" id="location" value="San Francisco, CA">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="settings-section">
+                                <h4>Preferences</h4>
+                                <div class="preference-item">
+                                    <div class="preference-info">
+                                        <h5>Email Notifications</h5>
+                                        <p>Receive updates about projects, collaborations, and achievements</p>
+                                    </div>
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="email-notifications" checked>
+                                        <label for="email-notifications"></label>
+                                    </div>
+                                </div>
+                                <div class="preference-item">
+                                    <div class="preference-info">
+                                        <h5>Project Collaboration Invites</h5>
+                                        <p>Allow other users to invite you to join their projects</p>
+                                    </div>
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="collaboration-invites" checked>
+                                        <label for="collaboration-invites"></label>
+                                    </div>
+                                </div>
+                                <div class="preference-item">
+                                    <div class="preference-info">
+                                        <h5>Public Profile</h5>
+                                        <p>Make your profile visible to other community members</p>
+                                    </div>
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="public-profile" checked>
+                                        <label for="public-profile"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section">
+                                <h4>Security</h4>
+                                <button class="settings-btn">Change Password</button>
+                                <button class="settings-btn">Two-Factor Authentication</button>
+                                <button class="settings-btn">Privacy Settings</button>
+                            </div>
+
+                            <div class="settings-actions">
+                                <button class="btn-primary">Save Changes</button>
+                                <button class="btn-secondary">Reset to Default</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 The New Wave. Empowering young innovators worldwide.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#support">Support</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

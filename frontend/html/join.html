@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Join The New Wave - Youth Innovation Platform" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Join The New Wave - Start Your Innovation Journey</title>
+        <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/join.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1><i class="fas fa-wave-square"></i> The New Wave</h1>
+            <nav class="nav-class">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="class-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="innovation.html"><i class="fas fa-rocket"></i> Innovation</a></li>
+                    <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="join-page">
+            <section class="join-hero">
+                <div class="hero-content">
+                    <h1><i class="fas fa-rocket"></i> Ready to Change the World?</h1>
+                    <p class="hero-subtitle">Join 47,000+ young innovators who are solving global challenges with technology and passion.</p>
+                    
+                    <div class="impact-preview">
+                        <div class="impact-stat">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <strong>2.3M+</strong>
+                                <span>Lives Impacted</span>
+                            </div>
+                        </div>
+                        <div class="impact-stat">
+                            <i class="fas fa-dollar-sign"></i>
+                            <div>
+                                <strong>$12M+</strong>
+                                <span>Funding Raised</span>
+                            </div>
+                        </div>
+                        <div class="impact-stat">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <strong>12K+</strong>
+                                <span>Collaborations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="subscription-form-section">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2><i class="fas fa-user-plus"></i> Start Your Journey</h2>
+                        <p>Tell us about yourself and your passion for innovation</p>
+                    </div>
+
+                    <form id="innovatorSignupForm" class="signup-form">
+                        <div class="form-step" data-step="1">
+                            <h3>Basic Information</h3>
+                            
+                            <div class="input-group">
+                                <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="age"><i class="fas fa-birthday-cake"></i> Age</label>
+                                    <input type="number" id="age" name="age" min="13" max="30" required>
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="country"><i class="fas fa-globe"></i> Country</label>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="FR">France</option>
+                                        <option value="IN">India</option>
+                                        <option value="CN">China</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="button" class="next-step-btn" onclick="nextStep()">
+                                Next <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="form-step hidden" data-step="2">
+                            <h3>Your Innovation Interests</h3>
+                            
+                            <div class="input-group">
+                                <label><i class="fas fa-lightbulb"></i> What areas excite you most? (Select all that apply)</label>
+                                <div class="interest-grid">
+                                    <label class="interest-card">
+                                        <input type="checkbox" name="interests" value="climate-tech">
+                                        <span class="interest-content">
+                                            <i class="fas fa-leaf"></i>
+                                            Climate Tech
+                                        </span>
+                                    </label>
+                                    
+                                    <label class="interest-card">
+                                        <input type="checkbox" name="interests" value="ai-ml">
+                                        <span class="interest-content">
+                                            <i class="fas fa-robot"></i>
+                                            AI & Machine Learning
+                                        </span>
+                                    </label>
+                                    
+                                    <label class="interest-card">
+                                        <input type="checkbox" name="interests" value="health-tech">
+                                        <span class="interest-content">
+                                            <i class="fas fa-heartbeat"></i>
+                                            Health Tech
+                                        </span>
+                                    </label>
+                                    
+                                    <label class="interest-card">
+                                        <input type="checkbox" name="interests" value="ed-tech">
+                                        <span class="interest-content">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            Education Tech
+                                        </span>
+                                    </label>
+                                    
+                                    <label class="interest-card">
+                                        <input type="checkbox" name="interests" value="fintech">
+                                        <span class="interest-content">
+                                            <i class="fas fa-coins"></i>
+                                            FinTech
+                                        </span>
+                                    </label>
+                                    
+                                    <label class="interest-card">
+                                        <input type="checkbox" name="interests" value="social-impact">
+                                        <span class="interest-content">
+                                            <i class="fas fa-hand-holding-heart"></i>
+                                            Social Impact
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="skillLevel"><i class="fas fa-chart-line"></i> Technical Skill Level</label>
+                                <select id="skillLevel" name="skillLevel" required>
+                                    <option value="">Select Level</option>
+                                    <option value="beginner">Beginner - Just getting started</option>
+                                    <option value="intermediate">Intermediate - Some experience</option>
+                                    <option value="advanced">Advanced - Strong technical skills</option>
+                                    <option value="expert">Expert - Industry-level expertise</option>
+                                </select>
+                            </div>
+
+                            <div class="form-navigation">
+                                <button type="button" class="prev-step-btn" onclick="prevStep()">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="button" class="next-step-btn" onclick="nextStep()">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-step hidden" data-step="3">
+                            <h3>Your Goals & Vision</h3>
+                            
+                            <div class="input-group">
+                                <label for="goals"><i class="fas fa-target"></i> What do you hope to achieve? (Select all that apply)</label>
+                                <div class="goals-grid">
+                                    <label class="goal-option">
+                                        <input type="checkbox" name="goals" value="learn-skills">
+                                        <span><i class="fas fa-books"></i> Learn new skills</span>
+                                    </label>
+                                    
+                                    <label class="goal-option">
+                                        <input type="checkbox" name="goals" value="find-mentor">
+                                        <span><i class="fas fa-user-graduate"></i> Find a mentor</span>
+                                    </label>
+                                    
+                                    <label class="goal-option">
+                                        <input type="checkbox" name="goals" value="build-project">
+                                        <span><i class="fas fa-hammer"></i> Build a project</span>
+                                    </label>
+                                    
+                                    <label class="goal-option">
+                                        <input type="checkbox" name="goals" value="join-team">
+                                        <span><i class="fas fa-users"></i> Join a team</span>
+                                    </label>
+                                    
+                                    <label class="goal-option">
+                                        <input type="checkbox" name="goals" value="get-funding">
+                                        <span><i class="fas fa-dollar-sign"></i> Get funding</span>
+                                    </label>
+                                    
+                                    <label class="goal-option">
+                                        <input type="checkbox" name="goals" value="make-impact">
+                                        <span><i class="fas fa-globe"></i> Make global impact</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="projectIdea"><i class="fas fa-lightbulb"></i> Tell us about a problem you want to solve (Optional)</label>
+                                <textarea id="projectIdea" name="projectIdea" rows="4" placeholder="What global challenge are you passionate about solving? What's your innovative idea?"></textarea>
+                            </div>
+
+                            <div class="form-navigation">
+                                <button type="button" class="prev-step-btn" onclick="prevStep()">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="submit" class="submit-btn">
+                                    <i class="fas fa-rocket"></i> Join The Revolution
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-progress">
+                            <div class="progress-step active" data-step="1">1</div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="2">2</div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="3">3</div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="benefits-sidebar">
+                    <h3><i class="fas fa-star"></i> What You'll Get</h3>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-brain"></i>
+                        <div>
+                            <h4>AI-Powered Mentorship</h4>
+                            <p>Get matched with the perfect mentor based on your goals and interests</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4>Global Network</h4>
+                            <p>Connect with 47,000+ innovators from 180+ countries</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-rocket"></i>
+                        <div>
+                            <h4>Project Launch Support</h4>
+                            <p>Get funding, team members, and resources for your ideas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4>Skill Development</h4>
+                            <p>Access courses, workshops, and certifications</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <h4>Recognition & Awards</h4>
+                            <p>Showcase your achievements and win innovation challenges</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <blockquote>
+                            "The New Wave connected me with a mentor who helped me turn my climate tech idea into a $50K funded startup!"
+                        </blockquote>
+                        <cite>- Sarah, Age 19, Kenya</cite>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <h3><i class="fas fa-wave-square"></i> The New Wave</h3>
+                    <p>Empowering the generation of builders and revolutionists. The time is now to shape the future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section navigation">
+                    <h4><i class="fas fa-sitemap"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="innovation.html"><i class="fas fa-rocket"></i> Innovation Hub</a></li>
+                        <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section features">
+                    <h4><i class="fas fa-star"></i> Features</h4>
+                    <ul>
+                        <li><a href="mentorship.html"><i class="fas fa-brain"></i> AI Mentorship</a></li>
+                        <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Project Collaboration</a></li>
+                        <li><a href="skills.html"><i class="fas fa-graduation-cap"></i> Skill Development</a></li>
+                        <li><a href="impact.html"><i class="fas fa-globe"></i> Global Impact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact">
+                    <h4><i class="fas fa-envelope"></i> Get Started</h4>
+                    <p><i class="fas fa-paper-plane"></i> Join thousands of young innovators</p>
+                    <a href="join.html" class="cta-button"><i class="fas fa-user-plus"></i> Join Now</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 The New Wave. Revolutionizing youth innovation globally.</p>
+            </div>
+        </footer>
+    </body>
+</html>

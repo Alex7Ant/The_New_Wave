@@ -1,0 +1,55 @@
+{
+  "name": "the-new-wave",
+  "version": "1.0.0",
+  "description": "The New Wave - Empowering the generation of builders and revolutionists through technology and innovation",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && live-server --port=3000\"",
+    "build": "cd backend && npm install",
+    "test": "cd backend && npm test",
+    "install-deps": "cd backend && npm install",
+    "setup": "npm run install-deps && npm run seed",
+    "seed": "cd backend && npm run seed",
+    "lint": "cd backend && npm run lint",
+    "deploy": "npm run build && npm start"
+  },
+  "keywords": [
+    "innovation",
+    "youth-platform",
+    "mentorship",
+    "ai-powered",
+    "social-impact",
+    "collaboration",
+    "global-community",
+    "problem-solving"
+  ],
+  "author": "The New Wave Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-new-wave/platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/the-new-wave/platform/issues"
+  },
+  "homepage": "https://thenewwave.global",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "live-server": "^1.2.2"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/the-new-wave"
+  },
+  "contributors": [
+    {
+      "name": "Young Innovators Community",
+      "url": "https://thenewwave.global/community"
+    }
+  ]
+}

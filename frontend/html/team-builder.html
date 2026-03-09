@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Team Builder - The New Wave" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Team Builder - The New Wave</title>
+        <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/team-builder.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1><i class="fas fa-wave-square"></i> The New Wave</h1>
+            <nav class="nav-class">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="class-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="innovation.html"><i class="fas fa-rocket"></i> Innovation</a></li>
+                    <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="team-builder-page">
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h1><i class="fas fa-users"></i> AI Team Builder</h1>
+                    <p>Find the perfect team members with skills that match your project's needs</p>
+                </div>
+            </section>
+
+            <div class="builder-container">
+                <div class="builder-sidebar">
+                    <h3><i class="fas fa-search"></i> Team Matching Features</h3>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>AI-Powered Matching</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <span>Skill Assessment</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Availability Tracking</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Communication Style</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Location & Timezone</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Project History</span>
+                        </div>
+                    </div>
+
+                    <div class="matching-stats">
+                        <h4><i class="fas fa-chart-bar"></i> Platform Stats</h4>
+                        <div class="stat">
+                            <span class="stat-number">12,547</span>
+                            <span class="stat-label">Active Members</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">89%</span>
+                            <span class="stat-label">Match Success Rate</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2,340</span>
+                            <span class="stat-label">Teams Formed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="builder-form">
+                    <div class="form-header">
+                        <h2>Build Your Dream Team</h2>
+                        <p>Tell us about your project and we'll find the perfect teammates for you</p>
+                    </div>
+
+                    <form id="team-builder-form">
+                        <div class="form-section">
+                            <h3>Project Overview</h3>
+                            
+                            <div class="form-group">
+                                <label for="project-name">Project Name *</label>
+                                <input type="text" id="project-name" name="project-name" required placeholder="e.g., EcoTrack - Smart Environmental Monitoring">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-description">Project Description *</label>
+                                <textarea id="project-description" name="project-description" rows="4" required placeholder="Describe your project, its goals, and what you're trying to achieve..."></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="project-stage">Project Stage</label>
+                                    <select id="project-stage" name="project-stage">
+                                        <option value="idea">Idea/Concept</option>
+                                        <option value="planning">Planning</option>
+                                        <option value="prototype">Prototyping</option>
+                                        <option value="development">In Development</option>
+                                        <option value="testing">Testing</option>
+                                        <option value="launch">Ready to Launch</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="project-duration">Expected Duration</label>
+                                    <select id="project-duration" name="project-duration">
+                                        <option value="1-3months">1-3 months</option>
+                                        <option value="3-6months">3-6 months</option>
+                                        <option value="6-12months">6-12 months</option>
+                                        <option value="1-2years">1-2 years</option>
+                                        <option value="ongoing">Ongoing/Long-term</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-type">Project Type</label>
+                                <select id="project-type" name="project-type">
+                                    <option value="startup">Startup/Business</option>
+                                    <option value="nonprofit">Non-profit/Social Impact</option>
+                                    <option value="open-source">Open Source</option>
+                                    <option value="research">Research Project</option>
+                                    <option value="freelance">Freelance/Contract</option>
+                                    <option value="hackathon">Hackathon/Competition</option>
+                                    <option value="learning">Learning/Educational</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Team Requirements</h3>
+                            
+                            <div class="form-group">
+                                <label for="team-size">Desired Team Size</label>
+                                <select id="team-size" name="team-size">
+                                    <option value="2-3">2-3 people</option>
+                                    <option value="4-5">4-5 people</option>
+                                    <option value="6-8">6-8 people</option>
+                                    <option value="9-12">9-12 people</option>
+                                    <option value="12+">12+ people</option>
+                                </select>
+                            </div>
+
+                            <div class="skills-selector">
+                                <label>Required Skills & Roles *</label>
+                                <p class="helper-text">Select all skills you need for your project</p>
+                                
+                                <div class="skills-categories">
+                                    <div class="skill-category">
+                                        <h4>Development</h4>
+                                        <div class="skill-checkboxes">
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="frontend-development">
+                                                <span>Frontend Development</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="backend-development">
+                                                <span>Backend Development</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="mobile-development">
+                                                <span>Mobile Development</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="fullstack-development">
+                                                <span>Full-Stack Development</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="devops">
+                                                <span>DevOps/Infrastructure</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-category">
+                                        <h4>Design & User Experience</h4>
+                                        <div class="skill-checkboxes">
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="ui-design">
+                                                <span>UI Design</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="ux-design">
+                                                <span>UX Research & Design</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="graphic-design">
+                                                <span>Graphic Design</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="product-design">
+                                                <span>Product Design</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-category">
+                                        <h4>Data & AI</h4>
+                                        <div class="skill-checkboxes">
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="data-science">
+                                                <span>Data Science</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="machine-learning">
+                                                <span>Machine Learning</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="ai-research">
+                                                <span>AI Research</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="data-analysis">
+                                                <span>Data Analysis</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-category">
+                                        <h4>Business & Strategy</h4>
+                                        <div class="skill-checkboxes">
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="product-management">
+                                                <span>Product Management</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="business-development">
+                                                <span>Business Development</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="marketing">
+                                                <span>Marketing</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="sales">
+                                                <span>Sales</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="finance">
+                                                <span>Finance</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-category">
+                                        <h4>Specialized</h4>
+                                        <div class="skill-checkboxes">
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="cybersecurity">
+                                                <span>Cybersecurity</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="blockchain">
+                                                <span>Blockchain</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="iot">
+                                                <span>IoT/Hardware</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="legal">
+                                                <span>Legal/Compliance</span>
+                                            </label>
+                                            <label class="skill-checkbox">
+                                                <input type="checkbox" name="skills" value="domain-expert">
+                                                <span>Domain Expert</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Team Preferences</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="experience-level">Experience Level</label>
+                                    <select id="experience-level" name="experience-level">
+                                        <option value="mixed">Mixed Levels (Recommended)</option>
+                                        <option value="beginner">Beginner/Student</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="senior">Senior/Expert</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="work-style">Work Style</label>
+                                    <select id="work-style" name="work-style">
+                                        <option value="collaborative">Collaborative</option>
+                                        <option value="independent">Independent</option>
+                                        <option value="structured">Structured/Process-driven</option>
+                                        <option value="agile">Agile/Flexible</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="time-commitment">Time Commitment</label>
+                                    <select id="time-commitment" name="time-commitment">
+                                        <option value="part-time">Part-time (5-15 hrs/week)</option>
+                                        <option value="moderate">Moderate (15-25 hrs/week)</option>
+                                        <option value="full-time">Full-time (25+ hrs/week)</option>
+                                        <option value="flexible">Flexible/Variable</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="communication">Communication Style</label>
+                                    <select id="communication" name="communication">
+                                        <option value="regular">Regular Check-ins</option>
+                                        <option value="daily">Daily Communication</option>
+                                        <option value="weekly">Weekly Updates</option>
+                                        <option value="async">Async/Flexible</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location-preference">Location Preference</label>
+                                <select id="location-preference" name="location-preference">
+                                    <option value="global">Global/Remote</option>
+                                    <option value="timezone">Same Timezone</option>
+                                    <option value="region">Same Region</option>
+                                    <option value="local">Local/Same City</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="budget-info">Budget/Compensation</label>
+                                <select id="budget-info" name="budget-info">
+                                    <option value="equity">Equity/Profit Share</option>
+                                    <option value="volunteer">Volunteer/Learning</option>
+                                    <option value="freelance">Freelance Rates</option>
+                                    <option value="salary">Salary/Regular Pay</option>
+                                    <option value="mixed">Mixed Compensation</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="special-requirements">Special Requirements or Notes</label>
+                                <textarea id="special-requirements" name="special-requirements" rows="3" placeholder="Any specific requirements, technologies, or important details about your project or team..."></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="mentor-access" name="mentor-access">
+                                <label for="mentor-access">Include access to mentors and industry experts</label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="skill-development" name="skill-development">
+                                <label for="skill-development">Focus on skill development and learning</label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="fast-matching" name="fast-matching">
+                                <label for="fast-matching">Priority matching (get results faster)</label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary btn-large">
+                                <i class="fas fa-users"></i> Find My Team
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Team Matches Results (initially hidden) -->
+                    <div id="team-matches" class="team-matches" style="display: none;">
+                        <h2><i class="fas fa-users"></i> Your Team Matches</h2>
+                        
+                        <div class="matches-header">
+                            <div class="match-stats">
+                                <span id="match-count">12</span> potential team members found
+                            </div>
+                            <div class="match-filters">
+                                <select id="sort-matches">
+                                    <option value="compatibility">Best Compatibility</option>
+                                    <option value="experience">Most Experience</option>
+                                    <option value="availability">Most Available</option>
+                                    <option value="location">Closest Location</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="matches-grid" class="matches-grid">
+                            <!-- Team member matches will be populated by JavaScript -->
+                        </div>
+
+                        <div class="team-formation">
+                            <h3><i class="fas fa-handshake"></i> Ready to Form Your Team?</h3>
+                            <p>Connect with team members and start building something amazing together!</p>
+                            <div class="formation-actions">
+                                <button class="btn-primary" id="contact-selected">
+                                    <i class="fas fa-envelope"></i> Contact Selected Members
+                                </button>
+                                <button class="btn-secondary" id="create-project">
+                                    <i class="fas fa-rocket"></i> Create Project Workspace
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section brand">
+                    <h3><i class="fas fa-wave-square"></i> The New Wave</h3>
+                    <p>Empowering the generation of builders and revolutionists. The time is now to shape the future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section navigation">
+                    <h4><i class="fas fa-sitemap"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="innovation.html"><i class="fas fa-rocket"></i> Innovation Hub</a></li>
+                        <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section features">
+                    <h4><i class="fas fa-star"></i> Features</h4>
+                    <ul>
+                        <li><a href="ai-mentorship.html"><i class="fas fa-brain"></i> AI Mentorship</a></li>
+                        <li><a href="project-collaboration.html"><i class="fas fa-project-diagram"></i> Project Collaboration</a></li>
+                        <li><a href="skill-development.html"><i class="fas fa-graduation-cap"></i> Skill Development</a></li>
+                        <li><a href="global-impact.html"><i class="fas fa-globe"></i> Global Impact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact">
+                    <h4><i class="fas fa-envelope"></i> Get Started</h4>
+                    <p><i class="fas fa-paper-plane"></i> Join thousands of young innovators</p>
+                    <a href="join.html" class="cta-button"><i class="fas fa-user-plus"></i> Join Now</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 The New Wave. Revolutionizing youth innovation globally.</p>
+            </div>
+        </footer>
+    </body>
+</html>

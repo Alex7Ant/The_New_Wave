@@ -1,0 +1,17 @@
+# Set default line ending behavior
+* text=auto
+
+# Force LF for these file types (common for web development)
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+
+# Binary files should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
